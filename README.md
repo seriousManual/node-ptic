@@ -20,7 +20,7 @@ npm test
 
 ## Usage
 
-### constructor(interval, [autoStart])
+### Constructor(interval, [autoStart])
 
 creates a ticker object that emits a `tick` event according to the specified interval.
 parameters:
@@ -34,6 +34,7 @@ causes the ticker to start emitting `tick` events
 ## stop
 stops the ticker
 
+## Example
 ````javascript
 
 var PTic = require('ptic');
