@@ -3,7 +3,7 @@ var PTic = require('../');
 var ticker = new PTic(100, true);
 
 ticker.on('tick', function() {
-    console.log('tick');
+    console.log((new Date()).getTime());
 });
 
 ticker.start();

@@ -14,7 +14,7 @@ npm install ptic
 
 ## Run Tests
 
-````
+````    
 npm test
 ````
 
