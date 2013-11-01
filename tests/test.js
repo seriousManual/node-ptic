@@ -36,4 +36,15 @@ describe('ptic', function() {
 
         expect(spy.callCount).to.equal(10);
     });
+
+    it('should not tick automatically', function() {
+        var ticker = new PTic(100);
+
+        var spy = sinon.spy();
+        ticker.on('tick', spy);
+
+        clock.tick(1000);
+
+        expect(spy.callCount).to.equal(0);
+    });
 });
