@@ -6,6 +6,20 @@
 
 [![NPM](https://nodei.co/npm-dl/ptic.png?months=3)](https://nodei.co/npm/ptic/)
 
+## Installation
+
+````
+npm install ptic
+````
+
+## Run Tests
+
+````
+npm test
+````
+
+## Usage
+
 ````javascript
 
 var PTic = require('ptic');
