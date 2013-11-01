@@ -55,11 +55,9 @@ describe('ptic', function() {
         ticker.on('tick', spy);
 
         ticker.start();
-
         clock.tick(1000);
 
         ticker.stop();
-
         clock.tick(1000);
 
         expect(spy.callCount).to.equal(11);
