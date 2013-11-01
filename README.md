@@ -8,7 +8,7 @@
 
 ````javascript
 
-var PTic = require('pic');
+var PTic = require('ptic');
 
 var ticker = new PTic(1000);
 
