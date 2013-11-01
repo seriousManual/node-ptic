@@ -26,4 +26,14 @@ describe('ptic', function() {
         expect(spy.callCount).to.equal(11);
     });
 
+    it('should tick automatically', function() {
+        var ticker = new PTic(100, true);
+
+        var spy = sinon.spy();
+        ticker.on('tick', spy);
+
+        clock.tick(1000);
+
+        expect(spy.callCount).to.equal(10);
+    });
 });

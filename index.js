@@ -5,13 +5,20 @@ var util = require('util');
  * EventEmitter that emits 'tick' events at a specific interval
  * More precise as setInterval, resyncs itself
  * @param interval the repeat interval in ms, default: 1000
+ * @param autoStart start the ticker automatically
  * @constructor
  */
-function Ticker(interval) {
+function Ticker(interval, autoStart) {
     Emitter.call(this);
+
+    autoStart = autoStart || false;
 
     this._interval = interval || 1000;
     this._handle = null;
+
+    if(autoStart) {
+        this.start();
+    }
 }
 
 util.inherits(Ticker, Emitter);
@@ -32,7 +39,9 @@ Ticker.prototype._tick = function() {
  * start the ticker
  */
 Ticker.prototype.start = function() {
-    this._tick();
+    if(!this._handle) {
+        this._tick();
+    }
 };
 
 /**
@@ -41,6 +50,7 @@ Ticker.prototype.start = function() {
 Ticker.prototype.stop = function() {
     if(this._handle) {
         clearTimeout(this._handle);
+        this._handle = null;
     }
 };
 
