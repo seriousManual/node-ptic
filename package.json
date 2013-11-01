@@ -1,5 +1,5 @@
 {
-  "name": "node-ptic",
+  "name": "ptic",
   "version": "0.0.1",
   "description": "precise resyncing interval",
   "main": "index.js",
@@ -20,5 +20,11 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zaphod1984/node-ptic/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.7.2",
+    "sinon": "~1.7.3"
   }
 }
