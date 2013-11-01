@@ -28,10 +28,10 @@ parameters:
 `interval`: the time in milliseconds between two ticks.
 `autoStart`: optional flag that specifies if the ticker should start on instantiation, default: false
 
-## start
+### start
 causes the ticker to start emitting `tick` events
 
-## stop
+### stop
 stops the ticker
 
 ## Example
