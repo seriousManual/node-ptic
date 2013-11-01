@@ -1,0 +1,24 @@
+{
+  "name": "node-ptic",
+  "version": "0.0.0",
+  "description": "precise resyncing interval",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zaphod1984/node-ptic.git"
+  },
+  "keywords": [
+    "interval",
+    "tick",
+    "precise",
+    "resync"
+  ],
+  "author": "Manuel Ernst <zaphod84@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaphod1984/node-ptic/issues"
+  }
+}
