@@ -35,6 +35,11 @@ Ticker.prototype._tick = function() {
     this._handle = setTimeout(this._tick.bind(this), duration);
 };
 
+/**
+ * indicates if the ticker process is currently emitting tick events
+ * @returns {boolean}
+ * @private
+ */
 Ticker.prototype._isRunning = function() {
     return this._handle !== null;
 };
