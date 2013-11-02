@@ -35,11 +35,15 @@ Ticker.prototype._tick = function() {
     this._handle = setTimeout(this._tick.bind(this), duration);
 };
 
+Ticker.prototype._isRunning = function() {
+    return this._handle !== null;
+};
+
 /**
  * start the ticker
  */
 Ticker.prototype.start = function() {
-    if(!this._handle) {
+    if(!this._isRunning()) {
         this._tick();
     }
 };
@@ -48,7 +52,7 @@ Ticker.prototype.start = function() {
  * stop the ticker
  */
 Ticker.prototype.stop = function() {
-    if(this._handle) {
+    if(this._isRunning()) {
         clearTimeout(this._handle);
         this._handle = null;
     }
