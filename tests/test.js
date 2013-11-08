@@ -26,6 +26,18 @@ describe('ptic', function() {
         expect(spy.callCount).to.equal(11);
     });
 
+    it('should tick with default interval', function() {
+        var ticker = new PTic();
+
+        var spy = sinon.spy();
+        ticker.on('tick', spy);
+
+        ticker.start();
+        clock.tick(1000);
+
+        expect(spy.callCount).to.equal(2);
+    });
+
     it('should tick automatically', function() {
         var ticker = new PTic(100, true);
 
