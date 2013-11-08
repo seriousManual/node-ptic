@@ -27,8 +27,8 @@ npm test
 creates a ticker object that emits a `tick` event according to the specified interval.
 parameters:
 
-`interval`: the time in milliseconds between two ticks, default: 1000ms.    
-`autoStart`: optional flag that specifies if the ticker should start on instantiation, default: false
+* `interval`: the time in milliseconds between two ticks, default: 1000ms.    
+* `autoStart`: optional flag that specifies if the ticker should start on instantiation, default: false
 
 ### start()
 causes the ticker to start emitting `tick` events
