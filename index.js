@@ -27,12 +27,14 @@ util.inherits(Ticker, Emitter);
  * the tick function, internal
  * @private
  */
-Ticker.prototype._tick = function() {
-    this.emit('tick');
+Ticker.prototype._tick = function(tick) {
+    if(tick) {
+        this.emit('tick');
+    }
 
     var duration = this._interval - ((new Date()).getMilliseconds() % this._interval);
 
-    this._handle = setTimeout(this._tick.bind(this), duration);
+    this._handle = setTimeout(this._tick.bind(this, true), duration);
 };
 
 /**
@@ -45,11 +47,14 @@ Ticker.prototype._isRunning = function() {
 };
 
 /**
- * start the ticker
+ * starts the ticker
+ * @param startImmediately
  */
-Ticker.prototype.start = function() {
+Ticker.prototype.start = function(startImmediately) {
+    startImmediately = startImmediately !== undefined ? !!startImmediately : true;
+
     if(!this._isRunning()) {
-        this._tick();
+        this._tick(startImmediately);
     }
 };
 
