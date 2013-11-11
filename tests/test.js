@@ -21,8 +21,8 @@ describe('ptic', function() {
         ticker.on('tick', spy);
 
         ticker.start();
-        clock.tick(1000);
 
+        clock.tick(1000);
         expect(spy.callCount).to.equal(11);
     });
 
@@ -33,8 +33,8 @@ describe('ptic', function() {
         ticker.on('tick', spy);
 
         ticker.start();
-        clock.tick(1000);
 
+        clock.tick(1000);
         expect(spy.callCount).to.equal(2);
     });
 
@@ -45,7 +45,6 @@ describe('ptic', function() {
         ticker.on('tick', spy);
 
         clock.tick(1000);
-
         expect(spy.callCount).to.equal(10);
     });
 
@@ -56,7 +55,6 @@ describe('ptic', function() {
         ticker.on('tick', spy);
 
         clock.tick(1000);
-
         expect(spy.callCount).to.equal(0);
     });
 
@@ -68,10 +66,10 @@ describe('ptic', function() {
 
         ticker.start();
         clock.tick(1000);
+        expect(spy.callCount).to.equal(11);
 
         ticker.stop();
         clock.tick(1000);
-
         expect(spy.callCount).to.equal(11);
     });
 });
