@@ -47,7 +47,7 @@ interval: 10ms, startImmediately=true
 0         10        20        30        40
 |---------|---------|---------|---------|
    ^
-   start()
+   start(true)
    T      T         T         T         T
 
 
@@ -56,7 +56,7 @@ interval: 10ms, startImmediately=false
 0         10        20        30        40
 |---------|---------|---------|---------|
    ^
-   start()
+   start(false)
           T         T         T         T
 ````
 
