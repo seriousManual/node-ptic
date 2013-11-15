@@ -75,6 +75,15 @@ ticker.on('tick', function() {
 
 ticker.start();
 
-ticker.stop();
+setTimeout(function() {
+    ticker.stop();
+}, 4000);
+
+//output:
+//tick
+//tick
+//tick
+//tick
+//tick
 
 ````
