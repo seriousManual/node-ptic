@@ -6,7 +6,9 @@
 
 [![NPM](https://nodei.co/npm-dl/ptic.png?months=3)](https://nodei.co/npm/ptic/)
 
-ptic is a more precise interval emitter. It resyncs itselfs to the desired timeframe. Bind to the `tick` event to get notified depending on the interval.
+PTic is a more precise interval emitter. It resyncs itselfs to the desired timeframe. Bind to the `tick` event to get notified depending on the interval.
+
+Check the ticker example in the example section for a comparism of setInterval and PTic.
 
 ## Installation
 
