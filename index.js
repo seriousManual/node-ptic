@@ -42,7 +42,7 @@ Ticker.prototype._tick = function(tick) {
  * @returns {boolean}
  * @private
  */
-Ticker.prototype._isRunning = function() {
+Ticker.prototype.isRunning = function() {
     return this._handle !== null;
 };
 
@@ -53,7 +53,7 @@ Ticker.prototype._isRunning = function() {
 Ticker.prototype.start = function(startImmediately) {
     startImmediately = startImmediately !== undefined ? !!startImmediately : true;
 
-    if(!this._isRunning()) {
+    if(!this.isRunning()) {
         this._tick(startImmediately);
     }
 };
@@ -62,7 +62,7 @@ Ticker.prototype.start = function(startImmediately) {
  * stop the ticker
  */
 Ticker.prototype.stop = function() {
-    if(this._isRunning()) {
+    if(this.isRunning()) {
         clearTimeout(this._handle);
         this._handle = null;
     }
