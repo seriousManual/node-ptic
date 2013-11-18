@@ -40,6 +40,9 @@ causes the ticker to start emitting `tick` events
 ### stop()
 stops the ticker
 
+### isRunning()
+indicates if the ticker is currently emitting tick events.
+
 ## Behaviour
 ````
 T: emitted tick
