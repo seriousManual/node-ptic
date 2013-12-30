@@ -32,15 +32,15 @@ parameters:
 * `interval`: the time in milliseconds between two ticks, default: 1000ms.    
 * `autoStart`: optional flag that specifies if the ticker should start on instantiation, default: false
 
-### start([startImmediately])
+### ptic.start([startImmediately])
 causes the ticker to start emitting `tick` events
 
 * `startImmediately`: specifies if the ticker should start immedately. if set to false the ticker first ticks on the next step in the interval raster.
 
-### stop()
+### ptic.stop()
 stops the ticker
 
-### isRunning()
+### ptic.isRunning()
 indicates if the ticker is currently emitting tick events.
 
 ## Behaviour
