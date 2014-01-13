@@ -28,13 +28,13 @@ util.inherits(Ticker, Emitter);
  * @private
  */
 Ticker.prototype._tick = function(tick) {
-    if(tick) {
-        this.emit('tick');
-    }
-
     var duration = this._interval - ((new Date()).getMilliseconds() % this._interval);
 
     this._handle = setTimeout(this._tick.bind(this, true), duration);
+
+    if(tick) {
+        this.emit('tick');
+    }
 };
 
 /**
