@@ -1,6 +1,6 @@
 {
   "name": "ptic",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "precise resyncing interval",
   "main": "index.js",
   "scripts": {
